@@ -1,0 +1,13 @@
+# Python klasörleri
+__pycache__/
+*.py[cod]
+venv/
+env/
+
+# Veri setleri (Eğer binlerce röntgen görseli varsa)
+datasets/
+data/
+
+# IDE ayarları
+.vscode/
+.idea/
