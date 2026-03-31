@@ -1,12 +1,12 @@
 # 🩺 Chest X-Ray Pneumonia Detection (AI-Powered)
 
-Bu proje, göğüs röntgeni (X-Ray) görüntülerinden **Zatürre (Pneumonia)** teşhisini otomatize eden yüksek doğruluklu bir Derin Öğrenme modelidir.
+Bu proje, göğüs röntgeni (X-Ray) görüntülerinden **Zatürre (Pneumonia)** teşhisini otonom bir şekilde tespit edebilen yüksek doğruluklu bir Derin Öğrenme modelidir.
 
 ## 🚀 Proje Özeti
 Model, tıbbi görüntüleme verilerindeki dengesiz dağılımı ve düşük kontrast sorunlarını aşarak **%91 F1-Score (Dengeli Başarı)** oranına ulaşmıştır. Gerçek dünya senaryolarına uygun, "False Negative" (hastayı kaçırma) oranını minimize eden bir yapı kurulmuştur.
 
 ## 🛠️ Kullanılan Teknolojiler
-* **Dil:** Python 3.11
+* **Dil:** Python 
 * **Kütüphaneler:** TensorFlow, Keras, OpenCV, NumPy, Matplotlib
 * **Model:** MobileNetV2 (Transfer Learning)
 * **Veri Yönetimi:** Google Colab (GPU T4), Google Drive Integration
@@ -17,8 +17,8 @@ Model, tıbbi görüntüleme verilerindeki dengesiz dağılımı ve düşük kon
 ![Confusion Matrix](model/reports/confusion_matrix.png)
 
 **Açıklama:**
-* **Dengeli Tahmin:** Modelimiz "Normal" sınıfta 27, "Zatürre" sınıfında 29 hata yaparak son derece dengeli bir performans sergilemiştir.
-* **Güvenilirlik:** Sınıflar arasındaki hata dağılımının birbirine yakın olması, modelin herhangi bir sınıfa yanlılık (bias) göstermediğini ve doku bozukluklarını gerçekten ayırt edebildiğini kanıtlar.
+* **Dengeli Tahmin:** Model, "Normal (Sağlıklı)" sınıfındaki 234 görüntünün 207'sini, "Zatürre" sınıfındaki 390 görüntünün ise 361'ini doğru teşhis etmiştir. Hata sayılarının (27'ye karşı 29) birbirine bu kadar yakın olması, modelin son derece dengeli ve tarafsız bir performans sergilediğini gösterir.
+* **Güvenilirlik:** Sınıflar arasındaki hata dağılımının birbirine yakın olması, modelin objektif bir karar mekanizması geliştirdiğini ve teşhis koyarken tutarlı davrandığını gösterir.
 
 ### 2. Model Success Samples (Tahmin Örnekleri)
 ![Model Success Samples](model/reports/model_success_samples.png)
@@ -30,8 +30,8 @@ Model, tıbbi görüntüleme verilerindeki dengesiz dağılımı ve düşük kon
 ### 3. Classification Report (Sınıflandırma Raporu)
 | Class | Precision | Recall | F1-Score |
 | :--- | :---: | :---: | :---: |
-| **Normal** | 0.89 | 0.89 | 0.89 |
-| **Pneumonia** | 0.93 | 0.92 | 0.93 |
+| **Normal** | 0.88 | 0.88 | 0.88 |
+| **Pneumonia** | 0.93 | 0.93 | 0.93 |
 | **Average / Total** | **0.91** | **0.91** | **0.91** |
 
 **Analiz:**
