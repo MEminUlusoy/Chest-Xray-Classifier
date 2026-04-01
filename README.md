@@ -35,8 +35,8 @@ Model, tıbbi görüntüleme verilerindeki dengesiz dağılımı ve düşük kon
 | **Average / Total** | **0.91** | **0.91** | **0.91** |
 
 **Analiz:**
-* **Recall (Duyarlılık):** Zatürre sınıfındaki yüksek Recall değeri, hasta olan bireylerin doğru tespit edilme oranının çok yüksek olduğunu gösterir (Tıbbi projelerde en kritik metrik).
-* **F1-Score:** %91'lik F1 skoru, modelin hem kesinlik hem de duyarlılık arasında kusursuz bir denge kurduğunu belgeler.
+* **Recall (Duyarlılık):** Zatürre sınıfındaki yüksek Recall değeri, hasta olan bireylerin doğru tespit edilme oranının çok yüksek olduğunu gösterir.
+* **F1-Score:** %91'lik F1 skoru, modelin sadece yüksek tahmin yapmakla kalmadığını, aynı zamanda hem hasta hem de sağlıklı vakaları birbirinden ayırırken ne kadar dengeli ve tutarlı bir performans sergilediğini kanıtlar.
 
 ## 💡 Uygulanan Teknik Stratejiler
 * **Oversampling:** sample_from_datasets ve %60-%40 ağırlıklandırma ile sınıflar arası veri dengesi (Imbalance) sağlandı.
