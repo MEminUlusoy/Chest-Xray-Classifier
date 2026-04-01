@@ -39,7 +39,9 @@ Model, tıbbi görüntüleme verilerindeki dengesiz dağılımı ve düşük kon
 * **F1-Score:** %91'lik F1 skoru, modelin hem kesinlik hem de duyarlılık arasında kusursuz bir denge kurduğunu belgeler.
 
 ## 💡 Uygulanan Teknik Stratejiler
-* **Data Augmentation:** `RandomFlip` ve `Rescaling` ile modelin geometrik varyasyonlara karşı dayanıklılığı artırıldı.
-* **Class Weighting:** Veri setindeki dengesizliği (Imbalance) gidermek için sınıflara özel ağırlıklar verildi.
-* **Label Smoothing:** Gerçek dünyadaki etiket gürültüsünü (Label Noise) kompanse etmek için etiket yumuşatma uygulandı.
-* **Learning Rate Scheduler:** Eğitim sırasında performansın durakladığı anlarda hız otomatik düşürülerek en iyi sonuca odaklanıldı.
+* **Oversampling:** sample_from_datasets ve %60-%40 ağırlıklandırma ile sınıflar arası veri dengesi (Imbalance) sağlandı.
+* **Data Augmentation:** RandomFlip, Rotation, Translation ve Zoom katmanları ile modelin genelleme yeteneği artırıldı.
+* **MobileNetV2 Preprocessing:** Pikseller preprocess_input ile modelin beklediği [-1, 1] aralığına çekildi.
+* **Label Smoothing:** Modele "hiçbir zaman %100 emin olma" talimatı verilerek etiket gürültüsü (insan kaynaklı hatalı etiketler) kompanse edildi. Bu sayede modelin hatalı etiketleri körü körüne ezberlemesi (overfitting) engellendi ve daha esnek bir karar mekanizması geliştirildi.
+* **Learning Rate Scheduler:**  ReduceLROnPlateau ile eğitim sırasında performansın durakladığı anlarda hız otomatik düşürülerek en iyi sonuca odaklanıldı.
+* **Fine-Tuning:** Dondurulmuş MobileNetV2 katmanlarının son 30 tanesi serbest bırakılarak modele özgü ince ayar yapıldı.
