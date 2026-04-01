@@ -1,6 +1,6 @@
-# 🩺 Chest X-Ray Pneumonia Detection (AI-Powered)
+# 🩺 Chest X-Ray Pneumonia Detection
 
-Bu proje, göğüs röntgeni (X-Ray) görüntülerinden **Zatürre (Pneumonia)** teşhisini otonom bir şekilde tespit edebilen yüksek doğruluklu bir Derin Öğrenme modelidir.
+Bu proje, göğüs röntgeni (X-Ray) görüntülerinden Zatürre (Pneumonia) teşhisini otonom olarak koyabilen yüksek doğruluklu bir Derin Öğrenme modelidir.
 
 ## 🚀 Proje Özeti
 Model, tıbbi görüntüleme verilerindeki dengesiz dağılımı ve düşük kontrast sorunlarını aşarak **%91 F1-Score (Dengeli Başarı)** oranına ulaşmıştır. Gerçek dünya senaryolarına uygun, "False Negative" (hastayı kaçırma) oranını minimize eden bir yapı kurulmuştur.
