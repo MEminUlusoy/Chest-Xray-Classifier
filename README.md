@@ -7,7 +7,7 @@ Model, tıbbi görüntüleme verilerindeki dengesiz dağılımı ve düşük kon
 
 ## 🛠️ Kullanılan Teknolojiler
 * **Dil:** Python 
-* **Kütüphaneler:** TensorFlow, Keras, Matplotlib
+* **Kütüphaneler:** TensorFlow, Keras, Matplotlib, Seaborn
 * **Model:** MobileNetV2 (Transfer Learning)
 * **Veri Yönetimi:** Google Colab (GPU T4), Google Drive Integration
 
